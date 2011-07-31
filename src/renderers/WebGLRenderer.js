@@ -3146,7 +3146,7 @@ THREE.WebGLRenderer = function ( parameters ) {
 
 		camera.matrixAutoUpdate && camera.update( undefined, true );
 
-		scene.update( undefined, false, camera );
+		scene.update( undefined, false, camera, this );
 
 		camera.matrixWorldInverse.flattenToArray( _viewMatrixArray );
 		camera.projectionMatrix.flattenToArray( _projectionMatrixArray );

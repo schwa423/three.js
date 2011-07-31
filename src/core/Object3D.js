@@ -191,7 +191,7 @@ THREE.Object3D.prototype = {
 
 	},
 
-	update: function ( parentMatrixWorld, forceUpdate, camera ) {
+	update: function ( parentMatrixWorld, forceUpdate, camera, renderer ) {
 
 		this.matrixAutoUpdate && this.updateMatrix();
 
@@ -221,7 +221,7 @@ THREE.Object3D.prototype = {
 
 		for ( var i = 0, l = this.children.length; i < l; i ++ ) {
 
-			this.children[ i ].update( this.matrixWorld, forceUpdate, camera );
+			this.children[ i ].update( this.matrixWorld, forceUpdate, camera, renderer );
 
 		}
 
